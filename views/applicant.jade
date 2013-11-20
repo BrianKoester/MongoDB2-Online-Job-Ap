@@ -1,0 +1,22 @@
+//- Render a job applicant.
+
+extends layout
+
+block content
+  .container
+    h1(data-name='#{name}') #{name}
+    hr
+
+
+    ul#applications.list-unstyled
+      .applicant-div
+        li Bio: #{bio}
+        li Skills: #{skills}
+        li Years of experience: #{years}
+        li Reason for wanting to work here: #{why}
+        br
+        br
+        button.delete-btn-applicant.btn.btn-primary.btn-sm.btn-danger(type="button") DELETE
+        br
+        br
+        a.btn.btn-primary.btn-info(href='/applicants') Return to Applicants

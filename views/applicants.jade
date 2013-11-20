@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	.container
+		h1 Applicants
+		hr
+		a.btn.btn-primary.btn-info(href='/') Return to Application Form
+		hr
+		br
+
+		ul#applications.list-unstyled
+		- for (var i=0; i<newApplicants.length; i++ ) {
+			.applicant-div
+				li(data-name='#{newApplicants[i].name}') Name:
+					a(href='#{newApplicants[i]._id}')  #{newApplicants[i].name}
+				li Bio: #{newApplicants[i].bio}
+				li Skills: #{newApplicants[i].skills}
+				li Years of experience: #{newApplicants[i].years}
+				li Reason for wanting to work here: #{newApplicants[i].why}
+				br
+				p
+					button.delete-btn.btn.btn-primary.btn-sm.btn-danger(type="button") DELETE
+				br
+				hr
+		- }
