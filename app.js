@@ -64,11 +64,11 @@ app.get('/applicants', function(req, res){
 
 // creates a new Applicant
 app.post('/applicant', function(req, res){
-	var newApplicant = new Applicant({     name: req.body.name,
-											bio: req.body.bio,
-								         skills: req.body.skills,
-									      years: req.body.years,
-									        why: req.body.why });
+	var newApplicant = new Applicant({     	name: req.body.name,
+						bio: req.body.bio,
+						skills: req.body.skills,
+						years: req.body.years,
+						why: req.body.why });
 	newApplicant.save();
 	res.send({success: 'Success!'});
 
