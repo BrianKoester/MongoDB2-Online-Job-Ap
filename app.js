@@ -33,15 +33,15 @@ if ('development' == app.get('env')) {
 
 
 // MongoDB
-// Create to the DB if it doesn't exist and connect to it
+// Create the DB if it doesn't exist and connect to it
 mongoose.connect('mongodb://localhost/omega');
 
 // setup and define mongoDB collection
-var Applicant = mongoose.model('Applicant', { 	  name: String,
-											       bio: String,
-										        skills: String,
-											     years: Number,
-											       why: String });
+var Applicant = mongoose.model('Applicant', { 	name: String,
+						bio: String,
+						skills: String,
+						years: Number,
+						why: String });
 
 
 //renders the index page
